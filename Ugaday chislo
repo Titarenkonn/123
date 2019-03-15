@@ -1,0 +1,83 @@
+a = 0
+b = 0
+c = 0
+d = 0
+n = 0
+k = 0
+ugadano = 0
+mesto = 0
+popitka = 0
+
+import random
+a = random.randint(1,9)
+b = random.randint(1,9)
+while b == a:
+    b = random.randint(1,9)
+c = random.randint(1,9)
+while c == b or c == a:
+    c = random.randint(1,9)
+d = random.randint(1,9)
+while d == c or d == b or d == a:
+    d = random.randint(1,9)
+number_true = (a, b, c, d)
+massage = 'Ugaday chislo '
+# massage = 'Isxodnoe chislo  %s %s %s %s'
+#print number_true
+#print (massage % (number_true[0], number_true[1], number_true[2], number_true[3]))
+
+while mesto != 4:
+    
+    x=4
+
+    number_owner = int(input())
+
+    number_owner = [int(x) for x in str(number_owner)]
+    if len(number_owner)>4:
+        print "Very long string"
+
+    number_owner0 = number_owner[0]
+    number_owner1 = number_owner[1]
+    number_owner2 = number_owner[2]
+    number_owner3 = number_owner[3]
+    # number_owner0 = int(input())
+    # number_owner1 = int(input())
+    # number_owner2 = int(input())
+    # number_owner3 = int(input())
+
+    ugadano = 0
+    mesto = 0
+    
+    if  number_true[0] == number_owner0:
+        mesto = mesto+1
+    if  number_true[1] == number_owner1:
+        mesto = mesto+1
+    if  number_true[2] == number_owner2:
+        mesto = mesto+1
+    if  number_true[3] == number_owner3:
+        mesto = mesto+1
+
+    
+    if  number_true[0] == number_owner0 or number_true[0] == number_owner1 or number_true[0] == number_owner2 or number_true[0] == number_owner3   :
+        ugadano = ugadano+1
+    if  number_true[1] == number_owner0 or number_true[1] == number_owner1 or number_true[1] == number_owner2 or number_true[1] == number_owner3   :
+        ugadano = ugadano+1
+    if  number_true[2] == number_owner0 or number_true[2] == number_owner1 or number_true[2] == number_owner2 or number_true[2] == number_owner3   :
+        ugadano = ugadano+1
+    if  number_true[3] == number_owner0 or number_true[3] == number_owner1 or number_true[3] == number_owner2 or number_true[3] == number_owner3   :
+        ugadano = ugadano+1
+        
+    print('Ugadal ', ugadano, ' cifr     ''Na svoem meste ', mesto)
+    k=k+1
+    popitka = popitka + 1
+    if popitka > 5:
+        mesto == 4
+    print(popitka, mesto)   
+    
+print ('Game over')
+
+
+
+
+
+
+
